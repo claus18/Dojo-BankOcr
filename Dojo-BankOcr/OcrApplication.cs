@@ -12,12 +12,19 @@ namespace Dojo_BankOcr
             var line1 = theFile[0];
             var line2 = theFile[1];
             var line3 = theFile[2];
+            var db = new StringBuilder();
+            for (int i; i < 9; i++){
+                var index = i*3;
+                var digit = line1.Substring(index, 3) + line2.Substring(index, 3) + line3.Substring(index, 3); 
+                if (digit == DigitString.zero)
+                {
+                    sb.Append("0");
+                }
+                
+            }
 
-            var digit1 = line1.Substring(0, 3) + line2.Substring(0, 3) + line3.Substring(0, 3); 
-            if (digit1 == DigitString.zero)
-            {
-                return "0";
-            }          
+            return sb.ToString();
+            
 
         }
 
