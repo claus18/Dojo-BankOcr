@@ -7,7 +7,7 @@ namespace Dojo_BankOcr.Test
 {
     public class UnitTest1
     {
-        private string _dir = @"C:\src\Repos\Dojo-BankOcr\Dojo-BankOcr.Test\bin\Debug\netcoreapp2.1\Files";  //HACK: hardkoded
+        private string _dir = AppDomain.CurrentDomain.BaseDirectory + "\\Files";  
 
         [Fact]
         public void AllZeros()
